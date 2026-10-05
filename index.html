@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5 razones por las que tus manos envejecen más rápido que tu cara | Nube Co</title>
+<meta name="description" content="Por qué las manos muestran la edad antes que el rostro, y qué podés hacer para que vuelvan a estar a la altura de tu cara.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+<!--
+  ============================================================
+  PRELANDING "5 RAZONES" — NUBE CO / YOUTHLIFT
+  ------------------------------------------------------------
+  1) Completá el bloque CONFIG (al final del archivo, en el <script>).
+     Lo que quede vacío se muestra resaltado en amarillo como "COMPLETAR".
+  2) Subí la carpeta /img junto con este archivo (mismas rutas).
+  ============================================================
+-->
+
+<style>
+  :root{
+    --ink:#1f2a2e;
+    --text:#3a4448;
+    --muted:#7b8589;
+    --mint:#e6f4ef;
+    --mint-strong:#cfe9df;
+    --accent:#4f9a80;
+    --line:#e3e7e8;
+    --black:#111;
+    --warn:#fff3b0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{font-family:'Open Sans',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:#fff;line-height:1.6;font-size:16px}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  mark.todo{background:var(--warn);color:#6b5400;padding:0 4px;border-radius:3px;font-weight:700}
+
+  /* ---------- Header ---------- */
+  .topbar{background:var(--mint);padding:10px 16px}
+  .topbar .wrap{max-width:760px;margin:0 auto}
+  .logo{font-family:'Playfair Display',Georgia,serif;font-size:26px;color:var(--ink);letter-spacing:.5px;text-decoration:none}
+
+  .wrap{max-width:760px;margin:0 auto;padding:0 16px}
+
+  /* ---------- Hero ---------- */
+  .hero{padding-top:28px;padding-bottom:8px}
+  h1{font-size:30px;line-height:1.25;color:var(--ink);font-weight:800;max-width:660px}
+  h1 small{display:block;font-size:inherit;font-weight:800}
+  .byline{display:flex;align-items:center;gap:12px;margin:18px 0 20px}
+  .byline .av{width:42px;height:42px;border-radius:50%;object-fit:cover;background:var(--mint-strong);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);font-size:14px;flex-shrink:0}
+  .byline p{font-size:13px;line-height:1.4;color:var(--muted)}
+  .byline strong{color:var(--ink)}
+  .summary{font-size:15.5px;color:var(--text);margin-bottom:12px}
+  .summary b{color:var(--ink)}
+
+  /* ---------- Razones ---------- */
+  .reason{display:grid;grid-template-columns:1fr;gap:18px;padding:30px 0;border-bottom:1px solid var(--line)}
+  .reason:last-of-type{border-bottom:0}
+  .reason h2{font-size:24px;line-height:1.3;color:var(--ink);font-weight:600;margin-bottom:12px}
+  .reason p{margin-bottom:10px;font-size:15.5px}
+  .reason ul{list-style:none;margin:6px 0 12px}
+  .reason li{margin-bottom:8px;padding-left:18px;position:relative;font-size:15.5px}
+  .reason li::before{content:"";position:absolute;left:2px;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+  .reason .strong{font-weight:700;color:var(--ink)}
+  @media(min-width:700px){
+    .reason{grid-template-columns:44% 1fr;gap:28px;align-items:start}
+    .reason .media{margin-top:6px}
+    h1{font-size:34px}
+  }
+
+  /* ---------- Imágenes / placeholders ---------- */
+  .media{border-radius:6px;overflow:hidden}
+  .media img{width:100%;height:auto}
+  .ph{aspect-ratio:600/327;background:repeating-linear-gradient(45deg,#f3f6f6,#f3f6f6 10px,#eaf0ef 10px,#eaf0ef 20px);border:1px dashed #b9c6c3;border-radius:6px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:14px;color:#5f6d6a;font-size:12.5px;line-height:1.4}
+  .ph b{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+  .ph.square{aspect-ratio:1/1}
+
+  /* ---------- Sección "¿Qué podés hacer?" ---------- */
+  .band{background:var(--mint);padding:40px 0;text-align:center}
+  .band h2{font-size:24px;color:var(--ink);font-weight:600;margin-bottom:12px}
+  .band p{max-width:600px;margin:0 auto 14px;font-size:15.5px}
+  .checks{list-style:none;max-width:560px;margin:8px auto 18px;text-align:left}
+  .checks li{padding-left:28px;position:relative;margin-bottom:10px;font-size:15.5px}
+  .checks li::before{content:"✓";position:absolute;left:0;top:0;color:var(--accent);font-weight:800}
+  .band .closing{font-weight:600;color:var(--ink)}
+
+  /* ---------- Producto ---------- */
+  .product .reason{border-bottom:1px solid var(--line)}
+  .bullets{list-style:none;margin:8px 0 14px}
+  .bullets li{margin-bottom:10px;padding-left:18px;position:relative;font-size:15.5px}
+  .reason .bullets li::before{content:"";position:absolute;left:2px;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--ink)}
+  .bullets b{color:var(--ink)}
+  .timeline{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
+  .timeline div{background:var(--mint);border-radius:6px;padding:10px 12px;font-size:13.5px;line-height:1.4}
+  .timeline b{display:block;color:var(--ink);font-size:14px}
+
+  /* ---------- CTA ---------- */
+  .cta-band{background:var(--mint);padding:36px 0}
+  .cta-box{background:#fff;border:2px dashed #a9cfc1;border-radius:10px;padding:26px 18px;text-align:center;max-width:620px;margin:0 auto}
+  .cta-box .off{font-size:26px;font-weight:600;color:var(--ink);letter-spacing:.02em}
+  .cta-box .off span{color:var(--accent)}
+  .price{margin:8px 0 2px;font-size:15px}
+  .price s{color:var(--muted)}
+  .price strong{font-size:22px;color:var(--ink)}
+  .price-sub{font-size:13px;color:var(--muted);margin-bottom:16px}
+  .btn{display:inline-block;background:var(--black);color:#fff;text-decoration:none;font-weight:800;letter-spacing:.06em;font-size:15px;padding:14px 34px;border-radius:4px;transition:transform .15s,background .15s}
+  .btn:hover{background:#2b2b2b;transform:translateY(-1px)}
+  .alert{margin:18px auto 0;font-size:13.5px;max-width:460px;line-height:1.5}
+  .alert b{color:var(--ink)}
+  .pill{display:inline-block;margin:14px 0 6px;background:var(--mint);border-radius:4px;padding:6px 16px;font-size:12px;letter-spacing:.08em;color:var(--ink)}
+  .pill b{color:#b23b3b}
+  .guarantee{font-size:12px;color:var(--muted);margin-top:6px}
+
+
+  /* ---------- CTA intermedios ---------- */
+  .mid-cta{background:var(--mint);border-radius:8px;padding:20px 18px;margin:8px 0 24px;text-align:center}
+  .mid-cta p{font-size:15.5px;color:var(--ink);font-weight:600;margin-bottom:12px;line-height:1.45}
+  .mid-cta .note{font-size:12.5px;color:var(--muted);font-weight:400;margin:10px 0 0}
+
+  /* ---------- Footer ---------- */
+  footer{background:#f4f6f6;padding:26px 0;text-align:center;font-size:11.5px;color:var(--muted);line-height:1.6}
+  footer p{max-width:680px;margin:0 auto 10px}
+  footer a{color:var(--muted)}
+
+  @media(max-width:420px){
+    h1{font-size:26px}
+    .reason h2{font-size:21px}
+    .btn{width:100%;padding:14px 10px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="topbar">
+  <div class="wrap" style="padding:0">
+    <!-- Si tenés el logo en imagen: <img src="img/logo-nube-co.png" alt="Nube Co" height="30"> -->
+    <a class="logo" data-href="urlTienda" href="https://nubecoarg.mitiendanube.com/productos/crema-de-manos-youthlift-con-retinol-970vw/">Nube Co</a>
+  </div>
+</header>
+
+<main>
+<!-- ================= HERO ================= -->
+<section class="wrap hero">
+  <h1>5 razones por las que tus manos envejecen más rápido que tu cara <small>(y cómo solucionarlo)</small></h1>
+
+  <div class="byline">
+    <img class="av" src="data:image/jpeg;base64,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" alt="Victoria Ríos" width="42" height="42">
+    <p>por <strong data-cfg="autora">Victoria Ríos</strong><br>Actualizado el <span data-cfg="fecha"></span></p>
+  </div>
+
+  <p class="summary"><b>Resumen:</b> si tenés más de 40 y sentís que tus manos aparentan bastante más edad que tu cara —manchas, venas marcadas, piel finita y arrugada en los nudillos—, no estás sola. Y no es tu imaginación. La mayoría de las soluciones que se usan tratan solo la superficie, no la causa. En esta nota repasamos las 5 razones por las que las manos muestran la edad antes que el rostro, y qué podés hacer para que vuelvan a estar a la altura de tu cara.</p>
+
+  <div class="mid-cta">
+    <p>¿Querés ir directo a la solución? Conocé la crema que lleva a tus manos el cuidado que ya le das a tu cara.</p>
+    <a class="btn" data-href="urlTienda" href="https://nubecoarg.mitiendanube.com/productos/crema-de-manos-youthlift-con-retinol-970vw/">QUIERO CONOCER YOUTHLIFT</a>
+    <p class="note">50% OFF durante octubre · 3 cuotas sin interés · Garantía de 180 días</p>
+  </div>
+</section>
+
+<!-- ================= RAZONES ================= -->
+<section class="wrap">
+
+  <!-- RAZÓN 1 -->
+  <article class="reason">
+    <figure class="media"><img src="img/01-piel-manos-vs-rostro.webp" alt="Comparación de la piel de la mano y la piel del rostro" width="800" height="800" loading="eager" decoding="async"></figure>
+    <div>
+      <h2>1. La piel de tus manos arranca en desventaja</h2>
+      <p>La mayoría de las mujeres da por hecho que las manos envejecen al mismo ritmo que la cara.</p>
+      <p>No es así. La piel del dorso de la mano es mucho más fina que la del rostro y casi no tiene glándulas sebáceas, así que se defiende con muy poca grasa natural. Con los años —y sobre todo con la menopausia— también pierde la almohadilla de grasa que la acolchaba. Por eso empiezan a marcarse las venas y los tendones.</p>
+      <p>Mientras no atiendas esa diferencia, todo lo que hagas va a quedarse corto.</p>
+    </div>
+  </article>
+
+  <!-- RAZÓN 2 -->
+  <article class="reason">
+    <figure class="media"><img src="img/02-rutina-cara-vs-manos.webp" alt="Mujer cuidando su rostro y mirando con preocupación sus manos" width="390" height="210" loading="lazy" decoding="async"></figure>
+    <div>
+      <h2>2. A tu cara le das todo. A tus manos, nada.</h2>
+      <p>Retinol a la noche. Sérum de vitamina C a la mañana. Protector solar todos los días.</p>
+      <p>¿Y tus manos? La crema que anda dando vueltas en la cartera, cuando te acordás.</p>
+      <p>Pensalo así: tu cara tiene una rutina de 3, 4 o 5 pasos. Tus manos tienen fecha de nacimiento. Es como arreglar la fachada de la casa y dejar el patio sin regar.</p>
+      <p>Sin ningún activo que las cuide, tus manos quedan totalmente expuestas a la pérdida de firmeza, al sol y a las manchas, año tras año.</p>
+    </div>
+  </article>
+
+  <div class="mid-cta">
+    <p>Tu cara ya tiene rutina. Es hora de que tus manos también la tengan.</p>
+    <a class="btn" data-href="urlTienda" href="https://nubecoarg.mitiendanube.com/productos/crema-de-manos-youthlift-con-retinol-970vw/">VER YOUTHLIFT CON 50% OFF</a>
+    <p class="note">50% OFF durante octubre · 3 cuotas sin interés · Garantía de 180 días</p>
+  </div>
+
+  <!-- RAZÓN 3 -->
+  <article class="reason">
+    <figure class="media"><img src="img/03-vida-diaria.webp" alt="Manejar, lavarse las manos y lavar platos desgastan la piel de las manos" width="388" height="208" loading="lazy" decoding="async"></figure>
+    <div>
+      <h2>3. La vida diaria desgasta tus manos sin que te des cuenta</h2>
+      <p>Mientras tu cara está protegida, tus manos reciben un ataque constante:</p>
+      <ul>
+        <li><b>El sol que entra por la ventanilla:</b> los rayos UVA atraviesan los vidrios laterales del auto y se acumulan sin quemarte. La mano en el volante recibe esa dosis todos los días.</li>
+        <li><b>El lavado constante:</b> agua y jabón decenas de veces por día se llevan la protección natural de la piel.</li>
+        <li><b>Detergente, lavandina y alcohol en gel:</b> resecan y dejan la piel cada vez más finita y áspera.</li>
+        <li><b>Frío, calor y aire acondicionado:</b> cada cambio de clima suma.</li>
+      </ul>
+      <p>Hasta las tareas más normales e inevitables van sumando desgaste en tus manos, mientras vos protegés tu cara con todo.</p>
+    </div>
+  </article>
+
+  <!-- RAZÓN 4 -->
+  <article class="reason">
+    <figure class="media"><img src="img/04-producto-facial-en-manos.webp" alt="Un producto facial puede ser demasiado fuerte para las manos" width="800" height="800" loading="lazy" decoding="async"></figure>
+    <div>
+      <h2>4. Usás productos de la cara en las manos (y no está funcionando)</h2>
+      <p>Muchas mujeres que saben de skincare piensan: <i>«Me paso el retinol de la cara por las manos y listo»</i>.</p>
+      <p>El problema es que el dorso de la mano es otra piel: más fina, más expuesta y lavada todo el día.</p>
+      <p>Un sérum facial es líquido, se usa en gotas y se va con el primer lavado. Y un retinol facial aplicado sin cuidado puede dejarte las manos rojas, ardidas y descamadas, que es justo lo que hace que muchas abandonen.</p>
+      <p class="strong">Con la fórmula equivocada no solo no ves resultados: perdés un tiempo valioso mientras el desgaste sigue avanzando.</p>
+    </div>
+  </article>
+
+  <div class="mid-cta">
+    <p>Tus manos necesitan una fórmula pensada para ellas, no los restos de tu sérum facial.</p>
+    <a class="btn" data-href="urlTienda" href="https://nubecoarg.mitiendanube.com/productos/crema-de-manos-youthlift-con-retinol-970vw/">VER DISPONIBILIDAD</a>
+    <p class="note">50% OFF durante octubre · 3 cuotas sin interés · Garantía de 180 días</p>
+  </div>
+
+  <!-- RAZÓN 5 -->
+  <article class="reason">
+    <figure class="media"><img src="img/05-cremas-comunes.webp" alt="Tratamientos y cremas comunes que no funcionan para las manos" width="387" height="210" loading="lazy" decoding="async"></figure>
+    <div>
+      <h2>5. Las cremas de manos que probaste solo hidratan (y se van con el lavado)</h2>
+      <p>¿La crema de farmacia, la del pote lindo o la que te regalaron? Casi todas están hechas para lo mismo: hidratar.</p>
+      <p>Dejan una película que se siente bien un rato… hasta que te lavás y desaparece.</p>
+      <p>No fueron pensadas para las manchas, la textura ni el sol de todos los días. Y muchas, encima, dejan las manos grasosas y el celular manchado.</p>
+      <p>Por eso podés ponerte crema cinco veces por día y que tus manos sigan viéndose «de papel».</p>
+      <p>Seguir confiando solo en ellas es dejar pasar años en los que tus manos podrían estar mucho mejor cuidadas.</p>
+    </div>
+  </article>
+
+</section>
+
+<!-- ================= ¿QUÉ PODÉS HACER? ================= -->
+<section class="band">
+  <div class="wrap">
+    <h2>¿Y entonces qué podés hacer?</h2>
+    <p>Si querés que tus manos estén a la altura de tu cara, no alcanza con hidratar la superficie. Hay que atender las causas.</p>
+    <p>Eso significa:</p>
+    <ul class="checks">
+      <li>Llevar a tus manos los mismos activos que ya usás y confiás para tu rostro</li>
+      <li>Ayudar a que la piel se vea más firme y con más cuerpo, con uso constante</li>
+      <li>Lograr un tono más parejo y protegerlas del sol de todos los días</li>
+      <li>Una textura no grasa, que no se vaya con el primer lavado ni te manche el celular</li>
+    </ul>
+    <!-- Si una dermatóloga o cosmetóloga matriculada valida la fórmula, este es el lugar para nombrarla (con su autorización). -->
+    <p class="closing">Por eso en Nube Co creamos una crema de manos que hace exactamente eso.</p>
+  </div>
+</section>
+
+<!-- ================= PRODUCTO ================= -->
+<section class="wrap product">
+  <article class="reason">
+    <figure class="media"><img src="img/06-formula-youthlift.webp" alt="La fórmula de YouthLift actuando sobre la piel" width="381" height="381" loading="lazy" decoding="async"></figure>
+    <div>
+      <h2>Los cuatro activos de tu rutina facial, en una crema pensada para tus manos</h2>
+      <p>La <b>Crema de Manos YouthLift de Nube Co</b> reúne en una sola fórmula el <b>Sistema YouthLift 4 en 1</b>:</p>
+      <ul class="bullets">
+        <li><b>Retinol:</b> ayuda a renovar la piel para que se vea más firme y suave con el uso continuo.</li>
+        <li><b>Vitamina C:</b> ayuda a que el tono se vea más parejo y luminoso, y a que las manchas se vean más tenues.</li>
+        <li><b>Ácido hialurónico:</b> hidrata en profundidad y le da cuerpo visible a la piel finita, «de papel».</li>
+        <!-- Confirmar el FPS con el laboratorio antes de publicar esta línea. -->
+        <li><b>Protección UV:</b> ayuda a proteger tus manos del sol de todos los días.</li>
+      </ul>
+      <p>Y la aplicás en un minuto: <b>no grasa, resistente al agua</b> y sin rutinas complicadas.</p>
+      <div class="timeline">
+        <div><b>En pocos días</b>Manos más suaves</div>
+        <div><b>En 3 a 6 semanas</b>Textura más lisa y manchas más tenues</div>
+      </div>
+      <p style="font-size:14px;color:var(--muted)">¿Es tu primera vez con retinol? Empezá de forma gradual y sumá aplicaciones a medida que tu piel se acostumbra.</p>
+    </div>
+  </article>
+
+  <article class="reason">
+    <figure class="media"><img src="img/07-youthlift-producto.webp" alt="Crema de Manos YouthLift de Nube Co con garantía de devolución" width="800" height="800" loading="lazy" decoding="async"></figure>
+    <div>
+      <h2>Probá el cambio sin riesgo</h2>
+      <!-- Si tenés un número REAL de clientas, sumalo acá: "Ya son más de X clientas que…" -->
+      <p>Sin láser, sin turnos en el consultorio y sin otra crema de farmacia que se va con el agua.</p>
+      <p>Tus manos, por fin, a la altura de tu cara.</p>
+      <p>¿Y lo mejor?</p>
+      <p>Cada compra tiene una <b>garantía de devolución de <span data-cfg="garantiaDias"></span> días</b>: si tus manos no se ven mejor, te devolvemos el dinero. Pagás en 3 cuotas sin interés y te llega en menos de 5 días.</p>
+    </div>
+  </article>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta-band" id="oferta">
+  <div class="wrap">
+    <div class="cta-box">
+      <div class="off">HASTA <span>50% OFF</span></div>
+      <p class="price"><s>$80.000</s> &nbsp;<strong>$39.990</strong></p>
+      <p class="price-sub">3 cuotas sin interés de $13.330 · $35.991 por transferencia</p>
+      <a class="btn" data-href="urlTienda" href="https://nubecoarg.mitiendanube.com/productos/crema-de-manos-youthlift-con-retinol-970vw/">VER DISPONIBILIDAD</a>
+
+      <p class="alert"><b>PROMO VIGENTE</b> hasta el <span data-cfg="promoHasta"></span>.<br>
+      Llevando el <b>Dúo YouthLift</b> (una para vos y una para regalar) el envío es <b>gratis</b>.</p>
+
+      <!-- Usá urgencia solo si es real: fecha de fin de promo o stock verdadero. -->
+      <div class="pill">STOCK: <b data-cfg="stockTexto"></b></div>
+
+      <p class="guarantee">¡Probala hoy con garantía de devolución de <span data-cfg="garantiaDias"></span> días!</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <p><b>AVISO MÉDICO Y DE SALUD:</b> la información y el contenido de esta página, o de cualquier material vinculado, no constituyen ni deben interpretarse como consejo médico, ni reemplazan la consulta o el tratamiento profesional. Si vos u otra persona tienen una inquietud de salud, consultá con tu médico o dermatólogo. Nunca dejes de lado ni demores un consejo médico profesional por algo que hayas leído en esta página. Los productos con retinol no se recomiendan durante el embarazo o la lactancia sin consulta médica. Los resultados pueden variar de persona a persona.</p>
+    <p>© <span data-cfg="anio"></span> Nube Co. Todos los derechos reservados. <a data-href="urlPrivacidad" href="#">Política de privacidad</a> · <a data-href="urlTerminos" href="#">Términos y condiciones</a></p>
+  </div>
+</footer>
+
+<script>
+  /* =============================================
+     CONFIG — completá estos valores antes de publicar
+     (lo que quede vacío se muestra como "COMPLETAR")
+     ============================================= */
+  var CONFIG = {
+    urlTienda:     "https://nubecoarg.mitiendanube.com/productos/crema-de-manos-youthlift-con-retinol-970vw/",
+    urlPrivacidad: "",
+    urlTerminos:   "",
+    autora:        "Victoria Ríos",
+    fecha:         "4 de octubre de 2026",
+    garantiaDias:  "180",
+    promoHasta:    "31 de octubre",
+    stockTexto:    "QUEDAN 100 UNIDADES",
+    anio:          String(new Date().getFullYear())
+  };
+
+  // Rellena los textos
+  document.querySelectorAll('[data-cfg]').forEach(function(el){
+    var v = CONFIG[el.getAttribute('data-cfg')];
+    if (v) { el.textContent = v; }
+    else { el.innerHTML = '<mark class="todo">COMPLETAR</mark>'; }
+  });
+
+  // Rellena los links
+  document.querySelectorAll('[data-href]').forEach(function(el){
+    var v = CONFIG[el.getAttribute('data-href')];
+    if (v) { el.setAttribute('href', v); }
+  });
+
+</script>
+</body>
+</html>
